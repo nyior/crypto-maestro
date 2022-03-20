@@ -32,7 +32,7 @@ async def main_cli():
     add_kraken_keys.set_defaults(func=CliCommandHandlers.add_kraken_keys)
 
     # Display BTC balance command parser
-    btc_balance = subparsers.add_parser("display_balance_btc")
+    btc_balance = subparsers.add_parser("display-balance-btc")
     btc_balance.set_defaults(func=CliCommandHandlers.display_btc_balance)
 
     # Display ETH balance command parser
