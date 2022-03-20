@@ -27,6 +27,7 @@ To set this project up locally and test it out follow the following steps:
 - Clone this repo to your local machine
 - Create a virtual env for the project
 - Navigate to the project's root directory and install all the dependencies `pip install requirements.txt`
+- For Ethereum queries, if you'd rather have the system query your local node, update the `PROVIDER_URL` environment variable in the `.env` file to your local node's IPC's path and set `IS_LOCAL_NODE` to `True`
 
 
 ## Accessing the Features
@@ -53,3 +54,17 @@ All the above inputs are then saved in the sqlite database that has been setup i
 
 #### Getting  BTC Balances
 - Run the command `python main.py display-balance-btc`
+    - The user will then be prompted to pick the fiat currency they'd want the system to show
+    The their fiat balance
+
+#### Getting ETH Balances
+- Run the command `python main.py display-balance-eth`
+    - The user will be prompted again for currency
+
+#### Getting Kranke Balances
+- Run the command `python main.py display-balance-kranken`
+
+#### Getting Help
+- Run the command `python main.py -h` 
+    - This will show a list of all the available commands. Sadly, I haven't added descriptions for ths command. It's meant to serve as a list that you could always refer to
+
