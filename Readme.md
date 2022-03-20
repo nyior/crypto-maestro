@@ -16,7 +16,7 @@ tool persist those data. I used the SQLite3 DB for data persistence. Pardon the 
 
 Speaking of features:
 
-- Get the baalances of all the BTC addresses at a go: Here the balance is returned in BTC and one of 5 Fiat Currencies(USD, EUR, NGN, CNY, JPY). The user gets to pick whichever currency they
+- Get the baalances of all the BTC addresses at a go: Here the balance is returned in BTC and one of 5 Fiat Currencies(USD, EUR, NGN, CNY, JPY). The user gets to pick whichever currency they want
 - Get the balances of all the ETH addresses at a go: same impplementation as the previous one.
 - Retrieve the balances of a Kranken account given its private key and associated api-key.
 
@@ -33,7 +33,7 @@ To set this project up locally and test it out follow the following steps:
 
 ## Accessing the Features
 Being a CLI program, you can only access the features of this project via the command line.
-You do that by navigating to the project's root directory that would then trigger certain
+You do that by navigating to the project's root directory. In the root directory, run some commands that would then trigger certain
 actions by the system. All commands are preceeded by `python main.py`.
 
 #### First Step
@@ -67,7 +67,7 @@ All the above inputs are then saved in the sqlite database that has been setup i
 
 #### Getting Help
 - Run the command `python main.py -h` 
-    - This will show a list of all the available commands. Sadly, I haven't added descriptions for ths command. It's meant to serve as a list that you could always refer to]
+    - This will show a list of all the available commands. Sadly, I haven't added descriptions for the commands. It's meant to serve as a list that you could always refer to
 
 #### Technologies Used
 - Python 3.8
@@ -76,9 +76,9 @@ All the above inputs are then saved in the sqlite database that has been setup i
 - sqlite3
 - Black and Isort - for linting
 - External APIs:
-    - Web3.py Hosted provider
+    - Infura-- Web3.py Hosted provider
     - Kranken-- for the kranken stuff lol
-    - Exchange-currency for getting btc to dollar rate, for example
-    - BlockCypher fot eh bitcoin stuff
+    - Exchange-currency-- for getting btc to dollar rate, for example
+    - BlockCypher-- fot eh bitcoin stuff
 
 
