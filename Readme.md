@@ -6,17 +6,18 @@
 It's a minimal CLI tool that connects to the ethereum, and bitcoin blochains as well as the Kraken Exchange.
 
 ## Features 
-Here are some the things you could do with this tool:
+Here are some of the things you could do with this tool:
 - Register 1 or more BTC Addresses
 - Register 1 or more ETH Addresses
 - Register a Kraken API key with its associated private key
 
 Note that registration here entails submitting the above listed data and having the CLI
 tool persist those data. I used the SQLite3 DB for data persistence. Pardon the deviation :))
+
 Speaking of features:
 
 - Get the baalances of all the BTC addresses at a go: Here the balance is returned in BTC and one of 5 Fiat Currencies(USD, EUR, NGN, CNY, JPY). The user gets to pick whichever currency they
-- Get the baalances of all the ETH addresses at a go: same impplementation as the previous one.
+- Get the balances of all the ETH addresses at a go: same impplementation as the previous one.
 - Retrieve the balances of a Kranken account given its private key and associated api-key.
 
 Note that for quering the ethereum blochain, you could either go with a hosted provider or local node. More on this shortly.
@@ -55,7 +56,7 @@ All the above inputs are then saved in the sqlite database that has been setup i
 #### Getting  BTC Balances
 - Run the command `python main.py display-balance-btc`
     - The user will then be prompted to pick the fiat currency they'd want the system to show
-    The their fiat balance
+    their fiat balance in
 
 #### Getting ETH Balances
 - Run the command `python main.py display-balance-eth`
@@ -66,5 +67,18 @@ All the above inputs are then saved in the sqlite database that has been setup i
 
 #### Getting Help
 - Run the command `python main.py -h` 
-    - This will show a list of all the available commands. Sadly, I haven't added descriptions for ths command. It's meant to serve as a list that you could always refer to
+    - This will show a list of all the available commands. Sadly, I haven't added descriptions for ths command. It's meant to serve as a list that you could always refer to]
+
+#### Technologies Used
+- Python 3.8
+- Asyncio $ aiohttp for making async requests
+- Web3.py - for the ethereum stuff
+- sqlite3
+- Black and Isort - for linting
+- External APIs:
+    - Web3.py Hosted provider
+    - Kranken-- for the kranken stuff lol
+    - Exchange-currency for getting btc to dollar rate, for example
+    - BlockCypher fot eh bitcoin stuff
+
 
